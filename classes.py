@@ -1,16 +1,22 @@
-class calculator:
-    def addition(x,y):
-        added=x+y
-        print(added)
-    def subtraction(x,y):
-        sub=x-y
-        print(sub)
-    def multiplication(x,y):
-        mult=x*y
-        print(mult)
-    def division(x,y):
-        div=x/y
-        print(x/y)
-              
+from tkinter import *
 
-calculator.addition(10,2)
+class  myButtons:
+         
+    def __init__(self,master):
+        frame = Frame(master)
+        frame.pack()
+    
+        self.click = Button(frame,text="Click",command=self.printit)
+        self.click.pack(side=LEFT)
+        
+        self.quitButton = Button(frame,text="quit",command=frame.master.destroy)
+        self.quitButton.pack(side=LEFT) 
+        
+        
+    def printit(self):
+        print("CLICKED")
+   
+        
+root= Tk()
+b = myButtons(root)
+root.mainloop()
