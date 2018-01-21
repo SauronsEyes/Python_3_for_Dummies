@@ -1,4 +1,5 @@
 import math
-x=2
-y=3
-print(math.pow(x, y))
+u=input("HI")
+angle_project=input("HELLO")
+a=int(u)*math.sin(int(angle_project)*math.pi/180)
+print(a)
